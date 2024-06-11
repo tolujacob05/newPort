@@ -81,6 +81,101 @@
   }
 }
 
-h1 {
+h1,
+h5 {
   font-family: "Cabinet Grotesk", sans-serif;
+}
+
+/* .blob {
+  @apply bg-gradient-to-r from-gradientStart to-gradientEnd rounded-[42%_58%_70%_30%_/_45%_45%_55%_55%] w-10 h-10 relative mb-0 cursor-pointer;
+  animation: anim 3s linear infinite;
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+  will-change: border-radius;
+}
+
+.blob::before,
+.blob::after {
+  content: "";
+  @apply absolute top-0 left-0 w-10 h-10 rounded-[42%_58%_70%_30%_/_45%_45%_55%_55%];
+  box-shadow: 5px 5px 89px rgba(0, 102, 255, 0.21);
+  will-change: border-radius, transform, opacity;
+  background-image: linear-gradient(
+    120deg,
+    rgba(0, 67, 255, 0.55) 0%,
+    rgba(0, 103, 255, 0.89) 100%
+  );
+}
+
+.blob::before {
+  animation: anim 1.5s linear infinite 200ms;
+  opacity: 0.21;
+}
+
+.blob::after {
+  animation: anim 3s linear infinite 400ms;
+  opacity: 0.89;
+}
+
+.animate-span::before {
+  content: "";
+  position: absolute;
+  width: 50vmin;
+  height: 50vmin;
+  background: radial-gradient(circle at 0% 0%, hotpink, slateblue);
+  border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+  box-shadow: 0 -2vmin 4vmin LightPink inset, 0 1vmin 4vmin MediumPurple inset,
+    0 -2vmin 7vmin purple inset;
+  filter: drop-shadow(0 0 3vmin Thistle) drop-shadow(0 5vmin 4vmin Orchid)
+    drop-shadow(2vmin -2vmin 15vmin MediumSlateBlue)
+    drop-shadow(0 0 7vmin MediumOrchid);
+  animation: anim 30s infinite;
+} */
+
+.box {
+  @apply w-[250px] lg:w-full h-[200px] bg-boxBackground relative shadow-customTwo;
+}
+
+.box::before,
+.box::after {
+  mix-blend-mode: multiply;
+  filter: none;
+  z-index: -1;
+  content: "";
+  width: calc(100% + (50px * 2));
+  height: calc(100% + (50px * 2));
+  position: absolute;
+  display: block;
+  animation: border 10s ease-in-out infinite;
+  transform: translateX(-50px) translateY(-50px);
+}
+
+.box::before {
+  background-color: #eab9c8;
+  clip-path: polygon(
+    calc(0% + 33.333px) calc(0% + 33.333px),
+    100% 0,
+    calc(100% - 33.333px) calc(100% - 33.333px),
+    0 100%
+  );
+}
+
+.box::after {
+  animation-delay: -5s;
+  background-color: #93e1d8;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 33.333px) calc(0% + 33.333px),
+    100% 100%,
+    calc(0% + 33.333px) calc(100% - 33.333px)
+  );
+}
+
+.box:hover::before,
+.box:hover::after {
+  animation-duration: 0.2s;
+}
+
+.box:hover::after {
+  animation-delay: -0.1s;
 }

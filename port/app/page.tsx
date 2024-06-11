@@ -1,10 +1,14 @@
 import Image from "next/image";
-import { Navbar } from "./navbar/page";
+// import { Home } from "./home/page";
+import Background from "@/components/background";
+import { Slider } from "@/components/slider";
 
-export default function Home() {
+export default function App() {
   return (
     <main className="min-h-screen">
-      <Navbar />
+      <Background />
+      {/* <Home /> */}
+      <Slider />
     </main>
   );
 }

@@ -58,122 +58,169 @@ export const Navbar = () => {
   });
 
   return (
-    <motion.nav
-      ref={navRef}
-      variants={{
-        visible: {
-          x: "-50%",
-          y: 0,
-          origin: "center",
-          opacity: 1,
-          transition: {
-            duration: 0.5,
+    <div className="relative">
+      <div className="absolute right-0 w-28 h-28 md:w-40 md:h-40 rounded-l-full top-0 bg-[#006D67] blur-3xl"></div>
+      <motion.nav
+        ref={navRef}
+        variants={{
+          visible: {
+            x: "-50%",
+            y: 0,
+            origin: "center",
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+            },
           },
-        },
-        hidden: {
+          hidden: {
+            x: "-50%",
+            y: -100,
+            opacity: 0,
+            transition: {
+              duration: 0.5,
+            },
+          },
+        }}
+        initial={{
           x: "-50%",
           y: -100,
-          opacity: 0,
-          transition: {
-            duration: 0.5,
-          },
-        },
-      }}
-      initial={{
-        x: "-50%",
-        y: -100,
-      }}
-      animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className={cn(
-        "fixed left-1/2 flex items-center justify-between w-11/12 max-w-screen-xl  px-6 py-3 lg:py-2  bg-black/50 bg-opacity-40 shadow-md z-20  backdrop-blur-md rounded-b-3xl",
-        { isNavOpen: "justify-center" } // Center the navigation when it's closed
-      )}
-    >
-      <div className="h-12">
-        <Link
-          href="/"
-          className={cn("flex flex-row  items-center content-start", {
-            "absolute top-0 left-0 px-6 py-4": isNavOpen,
-            "w-auto": !isNavOpen,
-          })}
-          prefetch={false}
-        >
-          <h1 className="relative top-3 text-xl text-[#FFFFF]">TOLU_JACOB</h1>
-        </Link>
-        <div className="absolute right-5 top-3 lg:hidden">
-          <Hamburger
-            toggled={isNavOpen}
-            rounded
-            toggle={setIsNavOpen}
-            size={28}
-            label="Show menu"
-            color="#0ECF7A"
-          />
+        }}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className={cn(
+          "fixed left-1/2 flex items-center justify-between w-11/12 max-w-screen-xl  px-6 py-3 lg:py-2  bg-[#080D1A] bg-opacity-40 shadow-md z-50  backdrop-blur-md rounded-b-3xl",
+          { isNavOpen: "justify-center" } // Center the navigation when it's closed
+        )}
+      >
+        <div className="h-12">
+          <Link
+            href="/"
+            className={cn("flex flex-row  items-center content-start", {
+              "absolute top-0 left-0 px-6 py-4": isNavOpen,
+              "w-auto": !isNavOpen,
+            })}
+            prefetch={false}
+          >
+            <h1 className="relative top-3 text-xl text-white">TOLU_JACOB</h1>
+          </Link>
+          <div className="absolute right-5 top-3 lg:hidden">
+            <Hamburger
+              toggled={isNavOpen}
+              rounded
+              toggle={setIsNavOpen}
+              size={28}
+              label="Show menu"
+              color="#0ECF7A"
+            />
+          </div>
         </div>
-      </div>
 
-      <nav className=" flex w-full justify-center items-center">
-        <section className="MOBILE-MENU flex lg:hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              transition={{ duration: 1, ease: "easeInOut" }}
-              className={cn({ "": isNavOpen, hidden: !isNavOpen })}
-            >
+        <nav className=" flex w-full justify-center items-center">
+          <section className="flex lg:hidden">
+            <AnimatePresence mode="wait">
               <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: isNavOpen ? 1 : 0, y: isNavOpen ? 0 : -20 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className={cn({ "": isNavOpen, hidden: !isNavOpen })}
               >
-                <ul className="flex flex-col items-center justify-between  pt-24 pb-6 min-h-64">
-                  <Link href={"/"} prefetch={false}>
-                    <Button onClick={() => setIsNavOpen(false)}>Home</Button>
-                  </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{
+                    opacity: isNavOpen ? 1 : 0,
+                    y: isNavOpen ? 0 : -20,
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ul className="flex flex-col gap-14 justify-between pt-28 pb-6 min-h-64">
+                    <Link href={"/"}>
+                      <Button onClick={() => setIsNavOpen(false)}>HOME</Button>
+                    </Link>
 
-                  <Link href={"/about-us"} prefetch={false}>
-                    <Button onClick={() => setIsNavOpen(false)}>
-                      About Us
-                    </Button>
-                  </Link>
+                    <Link href={"/about-us"}>
+                      <Button onClick={() => setIsNavOpen(false)}>BASE</Button>
+                    </Link>
 
-                  <Link href={"/faq"} prefetch={false}>
-                    <Button onClick={() => setIsNavOpen(false)}>FAQ</Button>
-                  </Link>
+                    <Link href={"/faq"}>
+                      <Button onClick={() => setIsNavOpen(false)}>
+                        WORKSHOP
+                      </Button>
+                    </Link>
 
-                  <Link href={"/contact"} prefetch={false}>
-                    <Button onClick={() => setIsNavOpen(false)}>
-                      Contact Us
-                    </Button>
-                  </Link>
-                </ul>
+                    <Link href={"/contact"}>
+                      <Button onClick={() => setIsNavOpen(false)}>
+                        DOWNLOAD CV
+                      </Button>
+                    </Link>
+                  </ul>
+
+                  <div className="pt-20">
+                    <p className="text-muted-foregroundOne text-center py-6">
+                      Quick Connect
+                    </p>
+
+                    <ul className="flex items-center justify-center border gap-14 px-6 py-4 border-muted-foregroundTwo bg-[#080D1A]/50 rounded-lg w-full">
+                      <li>
+                        <Image
+                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117597/portfolio/Vector5_ape0cq.png"
+                          width={20}
+                          height={20}
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <Image
+                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117582/portfolio/Vector4_zjfv2b.png"
+                          width={20}
+                          height={20}
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <Image
+                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117571/portfolio/Vector3_ms8chz.png"
+                          width={20}
+                          height={20}
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <Image
+                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117562/portfolio/Vector2_ylmdsv.png"
+                          width={20}
+                          height={20}
+                          alt=""
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </AnimatePresence>
-        </section>
-      </nav>
-      <div className=" items-center gap-x-2 hidden lg:flex">
-        <Link href={"/"} prefetch={false}>
-          <Button variant={"link"} className="px-6">
-            Home
-          </Button>
-        </Link>
-        <Link href={"/about-us"} prefetch={false}>
-          <Button variant={"link"} className="px-6">
-            About
-          </Button>
-        </Link>
-        <Link href={"/faq"} prefetch={false}>
-          <Button variant={"link"} className="px-6">
-            FAQ
-          </Button>
-        </Link>
+            </AnimatePresence>
+          </section>
+        </nav>
+        <div className=" items-center gap-x-2 hidden lg:flex">
+          <Link href={"/"}>
+            <Button variant={"link"} className="px-6">
+              HOME
+            </Button>
+          </Link>
+          <Link href={"/about-us"}>
+            <Button variant={"link"} className="px-6">
+              BASE
+            </Button>
+          </Link>
+          <Link href={"/faq"}>
+            <Button variant={"link"} className="px-6">
+              WORKSHOP
+            </Button>
+          </Link>
 
-        <Link href={"/contact"} prefetch={false}>
-          <Button variant={"link"} className="px-6">
-            Contact Us
-          </Button>
-        </Link>
-      </div>
-    </motion.nav>
+          <Link href={"/contact"}>
+            <Button variant={"link"} className="px-6">
+              REPO
+            </Button>
+          </Link>
+        </div>
+      </motion.nav>
+    </div>
   );
 };

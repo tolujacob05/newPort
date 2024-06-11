@@ -1,0 +1,22 @@
+/**
+* @license
+*
+* Font Family: Azeret Mono
+* Designed by: Displaay, Martin Vácha, Daniel Quisek
+* URL: https://www.fontshare.com/fonts/azeret-mono
+* © 2024 Indian Type Foundry
+*
+* Azeret Mono Regular 
+
+*
+*/
+@font-face {
+  font-family: 'AzeretMono-Regular';
+  src: url('../fonts/AzeretMono-Regular.woff2') format('woff2'),
+       url('../fonts/AzeretMono-Regular.woff') format('woff'),
+       url('../fonts/AzeretMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
