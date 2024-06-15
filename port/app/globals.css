@@ -39,6 +39,13 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --glow-color: hsl(186, 100%, 69%);
+
+    --rotate-speed: 40;
+    --count: 8; /* Default count, the DOM element should override this */
+    --easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+    --easing: cubic-bezier(0, 0.37, 1, 0.63);
   }
 
   .dark {
@@ -86,52 +93,6 @@ h5 {
   font-family: "Cabinet Grotesk", sans-serif;
 }
 
-/* .blob {
-  @apply bg-gradient-to-r from-gradientStart to-gradientEnd rounded-[42%_58%_70%_30%_/_45%_45%_55%_55%] w-10 h-10 relative mb-0 cursor-pointer;
-  animation: anim 3s linear infinite;
-  transform-style: preserve-3d;
-  outline: 1px solid transparent;
-  will-change: border-radius;
-}
-
-.blob::before,
-.blob::after {
-  content: "";
-  @apply absolute top-0 left-0 w-10 h-10 rounded-[42%_58%_70%_30%_/_45%_45%_55%_55%];
-  box-shadow: 5px 5px 89px rgba(0, 102, 255, 0.21);
-  will-change: border-radius, transform, opacity;
-  background-image: linear-gradient(
-    120deg,
-    rgba(0, 67, 255, 0.55) 0%,
-    rgba(0, 103, 255, 0.89) 100%
-  );
-}
-
-.blob::before {
-  animation: anim 1.5s linear infinite 200ms;
-  opacity: 0.21;
-}
-
-.blob::after {
-  animation: anim 3s linear infinite 400ms;
-  opacity: 0.89;
-}
-
-.animate-span::before {
-  content: "";
-  position: absolute;
-  width: 50vmin;
-  height: 50vmin;
-  background: radial-gradient(circle at 0% 0%, hotpink, slateblue);
-  border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-  box-shadow: 0 -2vmin 4vmin LightPink inset, 0 1vmin 4vmin MediumPurple inset,
-    0 -2vmin 7vmin purple inset;
-  filter: drop-shadow(0 0 3vmin Thistle) drop-shadow(0 5vmin 4vmin Orchid)
-    drop-shadow(2vmin -2vmin 15vmin MediumSlateBlue)
-    drop-shadow(0 0 7vmin MediumOrchid);
-  animation: anim 30s infinite;
-} */
-
 .box {
   @apply w-[250px] lg:w-full h-[200px] bg-boxBackground relative shadow-customTwo;
 }
@@ -178,4 +139,189 @@ h5 {
 
 .box:hover::after {
   animation-delay: -0.1s;
+}
+
+.profile:hover {
+  @apply flex-none w-full shadow-2xl -translate-y-6;
+}
+
+.profile:hover .content {
+  @apply opacity-100 translate-y-0 visible;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.container .box-card {
+  position: relative;
+  /* width: 320px; */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+
+.container .box-card::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+.container .box-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+}
+
+.container .box-card:hover:before,
+.container .box-card:hover:after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+
+.container .box-card:nth-child(1):before,
+.container .box-card:nth-child(1):after {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.container .box-card:nth-child(2):before,
+.container .box-card:nth-child(2):after {
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .box-card:nth-child(3):before,
+.container .box-card:nth-child(3):after {
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.container .box-card span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container .box-card span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.container .box-card:hover span::before {
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.container .box-card span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  animation-delay: -1s;
+}
+
+.container .box-card:hover span:after {
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.container .box-card .content {
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+}
+
+.container .box-card:hover .content {
+  /* left: -25px; */
+  padding: 60px 40px;
+}
+
+.container .box-card .content h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container .box-card .content p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container .box-card .content a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container .box-card .content a:hover {
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }

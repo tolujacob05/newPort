@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <>
       <WidthLayout>
-        <main className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center pt-40 md:pt-10 lg:pt-0 space-y-20 lg:space-y-0 lg:space-x-20 pb-10 z-20">
+        <main className="relative flex flex-col lg:flex-row items-center justify-center pt-40 space-y-20 lg:space-x-20 z-20">
           <div className="flex flex-col h-full">
             <div className="text-[#A3B6D9] w-full text-xs md:text-xl h-full">
               Hi everyone, I am{" "}
@@ -55,19 +55,10 @@ export const Home = () => {
               to design elements.
             </p>
 
-            <div className="flex items-end justify-end pt-4">
-              <div className="animate-bounce mx-1 h-2 w-2 flex justify-center items-center">
-                <div className="h-2 w-2 bg-gradient-to-br from-green to-green-accentTwo items-center rounded-xl shadow-2xl  cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
-              </div>
-              <div className="animate-bounce mx-1 h-2 w-2 flex justify-center items-center">
-                <div className="h-2 w-2 bg-gradient-to-br from-green to-green-accentTwo items-center rounded-xl shadow-2xl  cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
-              </div>
-              <div className="animate-bounce mx-1 h-2 w-2 flex justify-center items-center">
-                <div className="h-2 w-2 bg-gradient-to-br from-green to-green-accentTwo items-center rounded-xl shadow-2xl  cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
-              </div>
-              <div className="animate-bounce mx-1 h-2 w-2 flex justify-center items-center">
-                <div className="h-2 w-2 bg-gradient-to-br from-green to-green-accentTwo items-center rounded-xl shadow-2xl  cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
-              </div>
+            <div className="flex space-x-2 items-end justify-end pt-2 pb-6 lg:pt-4 ">
+              <div className="h-6 w-6 bg-green rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+              <div className="h-6 w-6 bg-green rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+              <div className="h-6 w-6 bg-green rounded-full animate-bounce"></div>
             </div>
           </div>
         </main>
