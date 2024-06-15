@@ -22,51 +22,7 @@ const config = {
         "gradient-one":
           "linear-gradient(135deg, var(--primary) 0%, var(--primary-hueOne) 50%, #18298B 70%)",
       },
-      // animationOne: {
-      //   anim: "anim 30s infinite",
-      // },
-      // keyframesOne: {
-      //   anim: {
-      //     "0%, 100%": {
-      //       "border-radius": "30% 70% 70% 30% / 30% 52% 48% 70%",
-      //       "box-shadow":
-      //         "0 -2vmin 4vmin var(--green) inset, 0 -4vmin 4vmin var(--green-accentOne) inset, 0 -2vmin 7vmin green inset",
-      //     },
-      //     "10%": {
-      //       "border-radius": "50% 50% 20% 80% / 25% 80% 20% 75%",
-      //     },
-      //     "20%": {
-      //       "border-radius": "67% 33% 47% 53% / 37% 20% 80% 63%",
-      //     },
-      //     "30%": {
-      //       "border-radius": "39% 61% 47% 53% / 37% 40% 60% 63%",
-      //       "box-shadow":
-      //         "0 -4vmin 8vmin var-(--green) inset, -1vmin -2vmin 6vmin var-(--green-accentTwo) inset, -1vmin -2vmin 4vmin var-(--green-accentOne) inset, 1vmin 4vmin 8vmin var-(--green-acccentTwo) inset",
-      //     },
-      //     "40%": {
-      //       "border-radius": "39% 61% 82% 18% / 74% 40% 60% 26%",
-      //     },
-      //     "50%": {
-      //       "border-radius": "100%",
-      //       "box-shadow":
-      //         "0 4vmin 16vmin var-(--green-accentTwo) inset, 0 2vmin 5vmin var-(--green-accentOne) inset, 0 4vmin 4vmin var-(--green) inset, 0 6vmin 8vmin var-(--green) inset",
-      //     },
-      //     "60%": {
-      //       "border-radius": "50% 50% 53% 47% / 72% 69% 31% 28%",
-      //     },
-      //     "70%": {
-      //       "border-radius": "50% 50% 53% 47% / 26% 22% 78% 74%",
-      //       "box-shadow":
-      //         "1vmin 1vmin 8vmin var-(--green-accentTwo) inset, 2vmin -1vmin 4vmin var-(--green-accentTwo) inset, -1vmin -1vmin 16vmin var-(--green) inset",
-      //     },
-      //     "80%": {
-      //       "border-radius": "50% 50% 53% 47% / 26% 69% 31% 74%",
-      //     },
-      //     "90%": {
-      //       "border-radius": "20% 80% 20% 80% / 20% 80% 20% 80%",
-      //     },
-      //   },
-      // },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -132,64 +88,6 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        morph: {
-          "0%, 100%": {
-            "border-radius": "42% 58% 70% 30% / 45% 45% 55% 55%",
-            transform: "translate3d(0, 0, 0) rotateZ(0.01deg)",
-          },
-          "34%": {
-            "border-radius": "70% 30% 46% 54% / 30% 29% 71% 70%",
-            transform: "translate3d(0, 5px, 0) rotateZ(0.01deg)",
-          },
-          "50%": {
-            opacity: "0.89",
-            transform: "translate3d(0, 0, 0) rotateZ(0.01deg)",
-          },
-          "67%": {
-            "border-radius": "100% 60% 60% 100% / 100% 100% 60% 60%",
-            transform: "translate3d(0, -3px, 0) rotateZ(0.01deg)",
-          },
-        },
-        anim: {
-          "0%, 100%": {
-            "border-radius": "30% 70% 70% 30% / 30% 52% 48% 70%",
-            "box-shadow":
-              "0 -2vmin 4vmin var(--green) inset, 0 -4vmin 4vmin var(--green-accentOne) inset, 0 -2vmin 7vmin green inset",
-          },
-          "10%": {
-            "border-radius": "50% 50% 20% 80% / 25% 80% 20% 75%",
-          },
-          "20%": {
-            "border-radius": "67% 33% 47% 53% / 37% 20% 80% 63%",
-          },
-          "30%": {
-            "border-radius": "39% 61% 47% 53% / 37% 40% 60% 63%",
-            "box-shadow":
-              "0 -4vmin 8vmin var-(--green) inset, -1vmin -2vmin 6vmin var-(--green-accentTwo) inset, -1vmin -2vmin 4vmin var-(--green-accentOne) inset, 1vmin 4vmin 8vmin var-(--green-acccentTwo) inset",
-          },
-          "40%": {
-            "border-radius": "39% 61% 82% 18% / 74% 40% 60% 26%",
-          },
-          "50%": {
-            "border-radius": "100%",
-            "box-shadow":
-              "0 4vmin 16vmin var-(--green-accentTwo) inset, 0 2vmin 5vmin var-(--green-accentOne) inset, 0 4vmin 4vmin var-(--green) inset, 0 6vmin 8vmin var-(--green) inset",
-          },
-          "60%": {
-            "border-radius": "50% 50% 53% 47% / 72% 69% 31% 28%",
-          },
-          "70%": {
-            "border-radius": "50% 50% 53% 47% / 26% 22% 78% 74%",
-            "box-shadow":
-              "1vmin 1vmin 8vmin var-(--green-accentTwo) inset, 2vmin -1vmin 4vmin var-(--green-accentTwo) inset, -1vmin -1vmin 16vmin var-(--green) inset",
-          },
-          "80%": {
-            "border-radius": "50% 50% 53% 47% / 26% 69% 31% 74%",
-          },
-          "90%": {
-            "border-radius": "20% 80% 20% 80% / 20% 80% 20% 80%",
-          },
-        },
         border: {
           "0%, 100%": {
             "-webkit-clip-path":
@@ -205,7 +103,7 @@ const config = {
           },
         },
 
-        animate: {
+        one: {
           "0%": {
             transform: "scale(0) translateY(0) rotate(70deg)",
           },
@@ -213,16 +111,85 @@ const config = {
             transform: "scale(1.3) translateY(-100px) rotate(360deg)",
           },
         },
+
+        rotateCW: {
+          from: {
+            transform: "translate3d(0px, -50%, -1px) rotate(-45deg)",
+          },
+          to: {
+            transform: "translate3d(0px, -50%, 0px) rotate(-315deg)",
+          },
+        },
+
+        rotateCCW: {
+          from: {
+            transform: "rotate(45deg)",
+          },
+          to: {
+            transform: "rotate(315deg)",
+          },
+        },
+
+        pulseGlow: {
+          from: {
+            backgroundSize: "60%",
+          },
+          to: {
+            backgroundSize: "100%",
+          },
+        },
+
+        animate: {
+          "0%, 100%": { transform: "translateY(10px)" },
+          "50%": { transform: "translate(-10px)" },
+        },
+
+        "faulty-flicker": {
+          "0%, 2%": { opacity: "0.1" },
+          "4%, 19%": { opacity: "0.5" },
+          "21%": { opacity: "0.1" },
+          "23%": { opacity: "1" },
+          "80%": { opacity: "0.5" },
+          "83%": { opacity: "0.4" },
+          "87%": { opacity: "1" },
+        },
+
+        "text-flicker": {
+          "0%": { opacity: "0.1" },
+          "2%": { opacity: "1" },
+          "8%": { opacity: "0.1" },
+          "9%": { opacity: "1" },
+          "12%": { opacity: "0.1" },
+          "20%": { opacity: "1" },
+          "25%": { opacity: "0.3" },
+          "30%": { opacity: "1" },
+          "70%": { opacity: "0.7" },
+          "72%": { opacity: "0.2" },
+          "77%": { opacity: "0.9" },
+          "100%": { opacity: "0.9" },
+        },
+
+        "border-flicker": {
+          "0%, 4%": { opacity: "0.1" },
+          "2%, 8%, 100%": { opacity: "1" },
+          "70%": { opacity: "0.7" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        morph: "morph 3s linear infinite",
-        morphBefore: "morph 1.5s linear infinite 200ms",
-        morphAfter: "morph 3s linear infinite 400ms",
+        "faulty-flicker": "faulty-flicker 2s linear infinite",
+        "text-flicker": "text-flicker 3s linear infinite",
+        "border-flicker": "border-flicker 2s linear infinite",
         border: "border 10s ease-in-out infinite",
         borderFast: "border 0.2s ease-in-out infinite",
-        animate: "animate 4s linear infinite",
+        one: "animate 4s linear infinite",
+        rotateCW:
+          "rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite",
+        rotateCCW:
+          "rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite",
+        pulseGlow: "pulseGlow 5s linear infinite alternate",
+        animate: "animate 2s ease-in-out infinite",
         // corner: "corner 3s linear infinite",
       },
       boxShadow: {
