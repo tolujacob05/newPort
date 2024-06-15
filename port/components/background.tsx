@@ -1,4 +1,4 @@
-import Home from "@/app/home/page";
+import Home from "@/app/landing/page";
 import { Slider } from "./slider";
 import WidthLayout from "./width-layout";
 import Demo from "./demo";
