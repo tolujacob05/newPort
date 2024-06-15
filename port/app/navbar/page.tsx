@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Navbar = () => {
+const Navbar = () => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const navRef = useRef(null);
@@ -56,6 +56,8 @@ export const Navbar = () => {
       setHidden(false);
     }
   });
+
+  const rings = 13;
 
   return (
     <div className="relative">
@@ -135,17 +137,17 @@ export const Navbar = () => {
                       <Button onClick={() => setIsNavOpen(false)}>HOME</Button>
                     </Link>
 
-                    <Link href={"/about-us"}>
+                    <Link href={""}>
                       <Button onClick={() => setIsNavOpen(false)}>BASE</Button>
                     </Link>
 
-                    <Link href={"/faq"}>
+                    <Link href={"/slider"}>
                       <Button onClick={() => setIsNavOpen(false)}>
                         WORKSHOP
                       </Button>
                     </Link>
 
-                    <Link href={"/contact"}>
+                    <Link href={""}>
                       <button className="relative text-green cursor-pointer py-2 px-4 border-2 border-green-accentOne rounded-md perspective-8 text-sm font-medium tracking-wider shadow-[inset_0px_0px_0.5em_0px_var(--glow-color),_0px_0px_0.5em_0px_var(--glow-color)] animate-[border-flicker_2s_linear_infinite] hover:animate-none hover:text-muted-foregroundTwo hover:border-muted-foregroundTwo">
                         <span className="relative inline-block mr-[-0.2em] text-shadow-[0_0_0.125em_hsla(0,0%,100%,0.3),_0_0_0.45em_var(--green-accentOne)] animate-[text-flicker_3s_linear_infinite]">
                           DOWNLOAD
@@ -164,36 +166,44 @@ export const Navbar = () => {
 
                     <ul className="flex items-center justify-center border gap-14 px-6 py-4 border-muted-foregroundTwo bg-[#080D1A]/50 rounded-lg w-full">
                       <li>
-                        <Image
-                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117597/portfolio/Vector5_ape0cq.png"
-                          width={20}
-                          height={20}
-                          alt=""
-                        />
+                        <a href="https://www.github.com/tolujacob05">
+                          <Image
+                            src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117597/portfolio/Vector5_ape0cq.png"
+                            width={20}
+                            height={20}
+                            alt=""
+                          />
+                        </a>
                       </li>
                       <li>
+                        {/* <a href="https://www.instagram.com/tolujacob05"> */}
                         <Image
                           src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117582/portfolio/Vector4_zjfv2b.png"
                           width={20}
                           height={20}
                           alt=""
                         />
+                        {/* </a> */}
                       </li>
                       <li>
-                        <Image
-                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117571/portfolio/Vector3_ms8chz.png"
-                          width={20}
-                          height={20}
-                          alt=""
-                        />
+                        <a href="https://www.linkedin.com/in/akinjare-toluwase">
+                          <Image
+                            src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117571/portfolio/Vector3_ms8chz.png"
+                            width={20}
+                            height={20}
+                            alt=""
+                          />
+                        </a>
                       </li>
                       <li>
-                        <Image
-                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117562/portfolio/Vector2_ylmdsv.png"
-                          width={20}
-                          height={20}
-                          alt=""
-                        />
+                        <a href="https://twitter.com/tolu_jacob05">
+                          <Image
+                            src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117562/portfolio/Vector2_ylmdsv.png"
+                            width={20}
+                            height={20}
+                            alt=""
+                          />
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -208,24 +218,24 @@ export const Navbar = () => {
               HOME
             </Button>
           </Link>
-          <Link href={"/about-us"}>
+          <Link href={""}>
             <Button variant={"link"} className="px-6">
               BASE
             </Button>
           </Link>
-          <Link href={"/faq"}>
+          <Link href={"/slider"}>
             <Button variant={"link"} className="px-6">
               WORKSHOP
             </Button>
           </Link>
 
-          <Link href={"/contact"}>
+          <Link href={""}>
             <Button variant={"link"} className="px-6">
               REPO
             </Button>
           </Link>
 
-          <Link href={"/contact"}>
+          <Link href={""}>
             <button className="relative text-green cursor-pointer py-2 px-4 border-2 border-green-accentOne rounded-md bg-none perspective-8 text-sm font-mediumtracking-wider shadow-[inset_0px_0px_0.5em_0px_var(--glow-color),_0px_0px_0.5em_0px_var(--green-accentOne)] animate-[border-flicker_2s_linear_infinite]">
               <span className="relative inline-block mr-[-0.2em] text-shadow-[0_0_0.125em_hsla(0,0%,100%,0.3),_0_0_0.45em_var(--green-accentOne)] animate-[text-flicker_3s_linear_infinite]">
                 DOWNLOAD
@@ -240,3 +250,5 @@ export const Navbar = () => {
     </div>
   );
 };
+
+export default Navbar;
