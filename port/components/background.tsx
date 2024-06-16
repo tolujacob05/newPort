@@ -1,15 +1,17 @@
-import { Home } from "@/app/home/page";
+import Home from "@/app/landing/page";
 import { Slider } from "./slider";
 import WidthLayout from "./width-layout";
+import Demo from "./demo";
 
 export default function Background() {
   return (
     <>
       <div className="relative min-h-screen w-full">
         <WidthLayout>
-          <div className="flex flex-col items-center justify-center space-y-20 lg:space-y-40 z-20">
+          <div className="flex flex-col space-y-20 lg:space-y-40 z-20">
             <Home />
             <Slider />
+            {/* <Demo /> */}
           </div>
         </WidthLayout>
 

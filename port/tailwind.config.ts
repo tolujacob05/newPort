@@ -174,6 +174,10 @@ const config = {
           "2%, 8%, 100%": { opacity: "1" },
           "70%": { opacity: "0.7" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -181,6 +185,7 @@ const config = {
         "faulty-flicker": "faulty-flicker 2s linear infinite",
         "text-flicker": "text-flicker 3s linear infinite",
         "border-flicker": "border-flicker 2s linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
         border: "border 10s ease-in-out infinite",
         borderFast: "border 0.2s ease-in-out infinite",
         one: "animate 4s linear infinite",

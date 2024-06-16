@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Navbar } from "../navbar/page";
+import Navbar from "../navbar/page";
 import WidthLayout from "@/components/width-layout";
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <WidthLayout>
@@ -66,3 +66,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;
