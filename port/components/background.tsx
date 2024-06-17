@@ -11,7 +11,7 @@ export default function Background() {
           <div className="flex flex-col space-y-20 lg:space-y-40 z-20">
             <Home />
             <Slider />
-            {/* <Demo /> */}
+            <Demo />
           </div>
         </WidthLayout>
 
