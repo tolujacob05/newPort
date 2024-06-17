@@ -46,18 +46,6 @@
     --count: 8; /* Default count, the DOM element should override this */
     --easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
     --easing: cubic-bezier(0, 0.37, 1, 0.63);
-
-    --hue: 223;
-    --sat: 90%;
-    --light: 55%;
-    --dur: 2s;
-    --rings: 13;
-    --curveSteps: 7;
-    --ringH: 4em;
-    --ringT: 0.25em;
-    --slinkyW: 8em;
-    --slinkyCurveH: 10.75em;
-    --hopGap: 1.5em;
   }
 
   .dark {
@@ -432,113 +420,190 @@ h5 {
   animation: fade-loop-alt 7s infinite;
 }
 
-@layer components {
-  .target {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-    &.top {
-      top: 0;
-    }
-    &.bottom {
-      bottom: 0;
-    }
-    &.left {
-      left: 0;
-    }
-    &.right {
-      right: 0;
-    }
+@keyframes move-dot1 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
   }
 
-  .hud {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
-    top: 7.5vw;
-    left: 25vw;
-    width: 50vw;
-    height: 50vw;
-    transition: all 0.5s ease;
-    transform-origin: center center;
-    transform-style: preserve-3d;
-    transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-      scale(1);
-    animation: hud-3d 2s 4s ease-in-out forwards;
+  20% {
+    transform: translateX(-50%) translateY(30%);
+  }
 
-    & .orange {
-      @apply bg-orange-500;
-    }
-
-    & .blue {
-      @apply bg-blue-500;
-    }
-
-    & .circle {
-      @apply rounded-full;
-    }
-
-    & .notch {
-      @apply bg-orange-500;
-    }
-
-    & .callout {
-      @apply bg-black border-b border-orange-500;
-      opacity: 0;
-      width: 0;
-      height: 5vw;
-      &.left {
-        bottom: 12.5vw;
-        left: -10vw;
-        animation: calloutleft-grow 3s 3s ease-in-out alternate infinite;
-      }
-      &.right {
-        top: 7.5vw;
-        right: -10vw;
-        text-align: right;
-        animation: calloutright-grow 3s 4s ease-in-out alternate infinite;
-      }
-      & .title,
-      & .body {
-        position: relative;
-        width: 100%;
-      }
-      & .title {
-        font-size: 2em;
-      }
-    }
+  100% {
+    transform: translateX(-50%) translateY(30%);
   }
 }
 
-@layer utilities {
-  @variants hover {
-    .target {
-      &.top.left:hover ~ .hud {
-        @apply transition-none;
-        transform: perspective(500px) rotateX(10deg) rotateY(-10deg)
-          rotateZ(0deg) scale(0.75);
-      }
-      &.top.right:hover ~ .hud {
-        @apply transition-none;
-        transform: perspective(500px) rotateX(10deg) rotateY(10deg)
-          rotateZ(0deg) scale(0.75);
-      }
-      &.bottom.left:hover ~ .hud {
-        @apply transition-none;
-        transform: perspective(500px) rotateX(-10deg) rotateY(-10deg)
-          rotateZ(0deg) scale(0.75);
-      }
-      &.bottom.right:hover ~ .hud {
-        @apply transition-none;
-        transform: perspective(500px) rotateX(-10deg) rotateY(10deg)
-          rotateZ(0deg) scale(0.75);
-      }
-    }
+@keyframes move-dot2 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  15% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+
+  30% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+
+  100% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+}
+
+.animation-example {
+  /* position: relative; */
+  height: 50vmin;
+  width: 50vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    transform-origin: 50% 100%;
+    pointer-events: none;
+  }
+
+  .item:nth-child(2) {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .item:nth-child(3) {
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .item:nth-child(4) {
+    transform: translateX(-50%) rotate(270deg);
+  }
+
+  .item > .line {
+    height: 100%;
+    width: "calc(50% + 1px)";
+    border-right: 2px dashed var(--primary);
+  }
+
+  .item > .dot {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 100%;
+    width: 100%;
+    animation: move-dot1 5.5s linear infinite;
+  }
+
+  .item > .dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 5%;
+    width: 5%;
+    background: var(--green-accentTwo);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+  }
+
+  .item > .circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      40deg,
+      #18298b 0%,
+      #10e27d 45%,
+      #e8e8cd 100%
+    );
+    padding: 50%;
+  }
+
+  .item.-type2 {
+    top: 0;
+    left: 0;
+    transform: none;
+    transform-origin: 100% 100%;
+  }
+
+  .item.-type2:nth-child(5) {
+    transform: scaleX(-100%);
+  }
+
+  .item.-type2:nth-child(6) {
+    transform: scaleX(-100%) scaleY(-100%);
+  }
+
+  .item.-type2:nth-child(7) {
+    transform: scaleY(-100%);
+  }
+
+  .item.-type2 > .line {
+    position: absolute;
+    top: 30%;
+    left: "calc(30% - 1px)";
+    width: 70%;
+    height: 40%;
+    border-right: none;
+    border-left: 2px dashed var(--primary);
+    border-bottom: 2px dashed var(--primary);
+  }
+
+  .item.-type2 > .dot {
+    top: 30%;
+    left: 30%;
+    animation: move-dot2 4s linear infinite;
+  }
+
+  .item.-type2 > .circle {
+    top: 30%;
+    left: 30%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 50%;
+    width: 50%;
+  }
+
+  .center > .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+  }
+
+  .center > .circle:nth-child(1) {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 3vmin rgba(0, 0, 0, 0.1);
+  }
+
+  .center > .circle:nth-child(2) {
+    height: 80%;
+    width: 80%;
+    border: 2px solid var(--primary);
+  }
+
+  .center > .circle:nth-child(3) {
+    height: 50%;
+    width: 50%;
+    background: var(--primary);
   }
 }

@@ -79,15 +79,18 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
         border: {
           "0%, 100%": {
             "-webkit-clip-path":
@@ -174,11 +177,22 @@ const config = {
           "2%, 8%, 100%": { opacity: "1" },
           "70%": { opacity: "0.7" },
         },
+
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+
+        typing: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        "blink-caret": {
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "orange" },
+        },
       },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -186,6 +200,8 @@ const config = {
         "text-flicker": "text-flicker 3s linear infinite",
         "border-flicker": "border-flicker 2s linear infinite",
         "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "blink-caret": "blink-caret 0.5s step-end infinite",
+        typing: "typing 3.5s steps(30, end) forwards",
         border: "border 10s ease-in-out infinite",
         borderFast: "border 0.2s ease-in-out infinite",
         one: "animate 4s linear infinite",
