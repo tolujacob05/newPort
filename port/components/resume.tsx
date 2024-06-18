@@ -14,7 +14,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
   return (
     <>
       <WidthLayout>
-        <div className="relative z-20 flex flex-col justify-center space-y-8">
+        <div className="relative z-20 flex flex-col space-y-8">
           <section>
             <h1 className="text-muted text-4xl">RESUME</h1>
             <p className="text-muted-foregroundTwo">Career Journey</p>
@@ -47,7 +47,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                     </svg>
                   </div>
 
-                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                     Summary
                   </span>
                 </div>
@@ -180,7 +180,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                     </svg>
                   </div>
 
-                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                     Experience
                   </span>
                 </div>
@@ -362,7 +362,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                     </svg>
                   </div>
 
-                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                     Certification
                   </span>
                 </div>
@@ -405,7 +405,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       </svg>
                     </div>
 
-                    <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                    <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                       Certification
                     </span>
                   </div>
@@ -493,7 +493,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                     </svg>
                   </div>
 
-                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                     Education
                   </span>
                 </div>
@@ -594,7 +594,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                     </svg>
                   </div>
 
-                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                     Proficiency
                   </span>
                 </div>
@@ -734,7 +734,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                     </svg>
                   </div>
 
-                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:bg-[#F5F5F5]">
+                  <span className="text-base text-muted-foregroundTwo md:text-lg hover:text-muted">
                     Skills & Interests
                   </span>
                 </div>
