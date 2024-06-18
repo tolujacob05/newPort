@@ -2,6 +2,8 @@ import Home from "@/app/landing/page";
 import { Slider } from "./slider";
 import WidthLayout from "./width-layout";
 import Demo from "./demo";
+import Resume from "./resume";
+import Contact from "./contact";
 
 export default function Background() {
   return (
@@ -12,6 +14,8 @@ export default function Background() {
             <Home />
             <Slider />
             <Demo />
+            <Resume />
+            <Contact />
           </div>
         </WidthLayout>
 
