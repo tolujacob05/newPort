@@ -64,7 +64,7 @@ export const Slider = () => {
 
   return (
     <>
-      <h1 className="text-muted-foregroundTwo text-start text-4xl" id="slider">
+      <h1 className="text-muted text-start text-4xl" id="slider">
         WorkShop
       </h1>
 

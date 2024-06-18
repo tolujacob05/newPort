@@ -187,6 +187,7 @@ const config = {
           "0%": { width: "0%" },
           "100%": { width: "100%" },
         },
+
         "blink-caret": {
           "0%, 100%": { borderColor: "transparent" },
           "50%": { borderColor: "orange" },
