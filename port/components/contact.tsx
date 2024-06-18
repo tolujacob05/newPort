@@ -3,7 +3,7 @@ const Contact = () => {
     <>
       <div className="relative z-20">
         <div className="parent">
-          <div className="card">
+          <div className="card-contact">
             <div className="logo">
               <span className="circle circle1"></span>
               <span className="circle circle2"></span>
