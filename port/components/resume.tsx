@@ -14,7 +14,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
   return (
     <>
       <WidthLayout>
-        <div className="relative z-20 flex flex-col space-y-8">
+        <div className="relative z-20 flex flex-col items-start justify-start space-y-8">
           <section>
             <h1 className="text-muted text-4xl">RESUME</h1>
             <p className="text-muted-foregroundTwo">Career Journey</p>
@@ -30,7 +30,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       width="1em"
                       height="1em"
                       viewBox="0 0 24 24"
-                      className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                      className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                       {...props}
                     >
                       <g
@@ -75,7 +75,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                           width="1em"
                           height="1em"
                           viewBox="0 0 24 24"
-                          className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                          className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                           {...props}
                         >
                           <g
@@ -155,7 +155,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       width="1em"
                       height="1em"
                       viewBox="0 0 48 48"
-                      className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                      className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                       {...props}
                     >
                       <rect
@@ -207,7 +207,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                         width="1em"
                         height="1em"
                         viewBox="0 0 48 48"
-                        className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                        className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                         {...props}
                       >
                         <rect
@@ -346,7 +346,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       width="1em"
                       height="1em"
                       viewBox="0 0 24 24"
-                      className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                      className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                       {...props}
                     >
                       <path
@@ -389,7 +389,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                         width="1em"
                         height="1em"
                         viewBox="0 0 24 24"
-                        className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                        className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                         {...props}
                       >
                         <path
@@ -476,7 +476,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       width="1em"
                       height="1em"
                       viewBox="0 0 15 15"
-                      className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                      className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                       {...props}
                     >
                       <path
@@ -520,7 +520,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                         width="1em"
                         height="1em"
                         viewBox="0 0 15 15"
-                        className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                        className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                         {...props}
                       >
                         <path
@@ -578,7 +578,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       width="1em"
                       height="1em"
                       viewBox="0 0 24 24"
-                      className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                      className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                       {...props}
                     >
                       <path
@@ -639,7 +639,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                       width="1em"
                       height="1em"
                       viewBox="0 0 48 48"
-                      className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                      className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                       {...props}
                     >
                       <path
@@ -761,7 +761,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
                         width="1em"
                         height="1em"
                         viewBox="0 0 48 48"
-                        className="text-background bg-green rounded-sm text-2xl lg:text-4xl p-2"
+                        className="text-background bg-green rounded-sm text-3xl lg:text-4xl p-2"
                         {...props}
                       >
                         <path

@@ -64,62 +64,65 @@ export const Slider = () => {
 
   return (
     <>
-      <h1 className="text-muted text-start text-4xl" id="slider">
-        WorkShop
-      </h1>
+      <div className="space-y-6">
+        <WidthLayout>
+          <h1 className="text-muted text-start text-4xl" id="slider">
+            WorkShop
+          </h1>
+        </WidthLayout>
+        <div className="w-full z-20 justify-center h-[500px] gap-2 hidden lg:flex">
+          {profiles.map((profile, index) => (
+            <div
+              key={index}
+              className="profile w-full rounded-lg transition-all duration-500 ease-in-out cursor-pointer shadow-lg relative overflow-hidden bg-cover bg-center"
+              style={{ backgroundImage: `url(${profile.img})` }}
+            >
+              <div className="content text-white text-2xl flex items-end p-4 opacity-0 flex-col h-full justify-end bg-gradient-to-t from-[rgba(2,2,46,0.675)] to-transparent translate-y-full transition-all duration-500 delay-200 invisible">
+                <h2>{profile.name}</h2>
+                <div className="flex gap-6">
+                  <WidthLayout>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <span className="text-base text-muted-foregroundOne md:text-lg hover:bg-[#F5F5F5]">
+                          view
+                        </span>
+                      </DialogTrigger>
 
-      <div className="w-full z-20 justify-center h-[500px] gap-2 hidden lg:flex">
-        {profiles.map((profile, index) => (
-          <div
-            key={index}
-            className="profile w-full rounded-lg transition-all duration-500 ease-in-out cursor-pointer shadow-lg relative overflow-hidden bg-cover bg-center"
-            style={{ backgroundImage: `url(${profile.img})` }}
-          >
-            <div className="content text-white text-2xl flex items-end p-4 opacity-0 flex-col h-full justify-end bg-gradient-to-t from-[rgba(2,2,46,0.675)] to-transparent translate-y-full transition-all duration-500 delay-200 invisible">
-              <h2>{profile.name}</h2>
-              <div className="flex gap-6">
-                <WidthLayout>
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <span className="text-base text-muted-foregroundOne md:text-lg hover:bg-[#F5F5F5]">
-                        view
-                      </span>
-                    </DialogTrigger>
-
-                    <DialogContent className="bg-[#161822] border-[#161822] ">
-                      <DialogClose asChild>
-                        <div className="hidden md:block">
-                          <Button
-                            type="button"
-                            variant="outline"
-                            className="bg-[#E6E7E8] float-right rounded-xl"
-                          >
-                            Close <span className="text-black ml-1">X</span>
-                          </Button>
-                        </div>
-                      </DialogClose>
-
-                      <DialogFooter>
-                        <div className="px-4 py-3 pt-5 w-full flex flex-col items-center gap-3 md:flex-row md:justify-end">
-                          <div className="w-full md:hidden">
-                            <DialogClose asChild>
-                              <Button
-                                type="submit"
-                                className="h-14 text-base text-[#dadce4] md:text-lg w-full"
-                              >
-                                Cancel
-                              </Button>
-                            </DialogClose>
+                      <DialogContent className="bg-[#161822] border-[#161822] ">
+                        <DialogClose asChild>
+                          <div className="hidden md:block">
+                            <Button
+                              type="button"
+                              variant="outline"
+                              className="bg-[#E6E7E8] float-right rounded-xl"
+                            >
+                              Close <span className="text-black ml-1">X</span>
+                            </Button>
                           </div>
-                        </div>
-                      </DialogFooter>
-                    </DialogContent>
-                  </Dialog>
-                </WidthLayout>
+                        </DialogClose>
+
+                        <DialogFooter>
+                          <div className="px-4 py-3 pt-5 w-full flex flex-col items-center gap-3 md:flex-row md:justify-end">
+                            <div className="w-full md:hidden">
+                              <DialogClose asChild>
+                                <Button
+                                  type="submit"
+                                  className="h-14 text-base text-[#dadce4] md:text-lg w-full"
+                                >
+                                  Cancel
+                                </Button>
+                              </DialogClose>
+                            </div>
+                          </div>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
+                  </WidthLayout>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className="container flex flex-col items-center justify-center md:grid md:grid-cols-2 gap-10 space-y-20 md:space-y-0 lg:hidden">
