@@ -147,7 +147,7 @@ const Navbar = () => {
                       </Button>
                     </Link>
 
-                    <Link href={""}>
+                    <a href="/resume.pdf" download="resume">
                       <button className="relative text-green cursor-pointer py-2 px-4 border-2 border-green-accentOne rounded-md perspective-8 text-sm font-medium tracking-wider shadow-[inset_0px_0px_0.5em_0px_var(--glow-color),_0px_0px_0.5em_0px_var(--glow-color)] animate-[border-flicker_2s_linear_infinite] hover:animate-none hover:text-muted-foregroundTwo hover:border-muted-foregroundTwo">
                         <span className="relative inline-block mr-[-0.2em] text-shadow-[0_0_0.125em_hsla(0,0%,100%,0.3),_0_0_0.45em_var(--green-accentOne)] animate-[text-flicker_3s_linear_infinite]">
                           DOWNLOAD
@@ -156,7 +156,7 @@ const Navbar = () => {
                           </span>
                         </span>
                       </button>
-                    </Link>
+                    </a>
                   </ul>
 
                   <div className="pt-20">
@@ -235,8 +235,8 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          <Link href={""}>
-            <button className="relative text-green cursor-pointer py-2 px-4 border-2 border-green-accentOne rounded-md bg-none perspective-8 text-sm font-mediumtracking-wider shadow-[inset_0px_0px_0.5em_0px_var(--glow-color),_0px_0px_0.5em_0px_var(--green-accentOne)] animate-[border-flicker_2s_linear_infinite]">
+          <a href="/resume.pdf" download="resume">
+            <button className="relative text-green cursor-pointer py-2 px-4 border-2 border-green-accentOne rounded-md perspective-8 text-sm font-medium tracking-wider shadow-[inset_0px_0px_0.5em_0px_var(--glow-color),_0px_0px_0.5em_0px_var(--glow-color)] animate-[border-flicker_2s_linear_infinite] hover:animate-none hover:text-muted-foregroundTwo hover:border-muted-foregroundTwo">
               <span className="relative inline-block mr-[-0.2em] text-shadow-[0_0_0.125em_hsla(0,0%,100%,0.3),_0_0_0.45em_var(--green-accentOne)] animate-[text-flicker_3s_linear_infinite]">
                 DOWNLOAD
                 <span className="ml-2 opacity-50 animate-[faulty-flicker_2s_linear_infinite]">
@@ -244,7 +244,7 @@ const Navbar = () => {
                 </span>
               </span>
             </button>
-          </Link>
+          </a>
         </div>
       </motion.nav>
     </div>

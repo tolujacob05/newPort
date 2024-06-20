@@ -21,6 +21,8 @@ const config = {
       backgroundImage: {
         "gradient-one":
           "linear-gradient(135deg, var(--primary) 0%, var(--primary-hueOne) 50%, #18298B 70%)",
+        "background-img":
+          "url('https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png')",
       },
 
       colors: {
@@ -115,6 +117,15 @@ const config = {
           },
         },
 
+        two: {
+          "0%": {
+            transform: "scale(0) translateY(0) rotate(360deg)",
+          },
+          "100%": {
+            transform: "scale(1) translateY(-50px) rotate(360deg)",
+          },
+        },
+
         rotateCW: {
           from: {
             transform: "translate3d(0px, -50%, -1px) rotate(-45deg)",
@@ -192,6 +203,25 @@ const config = {
           "0%, 100%": { borderColor: "transparent" },
           "50%": { borderColor: "orange" },
         },
+
+        display: {
+          "0%": {
+            transform: "scaleX(0)",
+            "transform-origin": "left",
+          },
+          "50%": {
+            transform: "scaleX(1)",
+            "transform-origin": "left",
+          },
+          "50.1%": {
+            transform: "scaleX(1)",
+            "transform-origin": "right",
+          },
+          "100%": {
+            transform: "scaleX(0)",
+            "transform-origin": "right",
+          },
+        },
       },
 
       animation: {
@@ -206,12 +236,14 @@ const config = {
         border: "border 10s ease-in-out infinite",
         borderFast: "border 0.2s ease-in-out infinite",
         one: "animate 4s linear infinite",
+        two: "animate 4s linear infinite",
         rotateCW:
           "rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite",
         rotateCCW:
           "rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite",
         pulseGlow: "pulseGlow 5s linear infinite alternate",
         animate: "animate 2s ease-in-out infinite",
+        display: "display 4s linear infinite",
         // corner: "corner 3s linear infinite",
       },
       boxShadow: {

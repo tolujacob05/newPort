@@ -4,6 +4,8 @@ import WidthLayout from "./width-layout";
 import Demo from "./demo";
 import Resume from "./resume";
 import Contact from "./contact";
+import Message from "./message";
+import Footer from "./footer";
 
 export default function Background() {
   return (
@@ -16,6 +18,8 @@ export default function Background() {
             <Demo />
             <Resume />
             <Contact />
+            <Message />
+            <Footer />
           </div>
         </WidthLayout>
 
