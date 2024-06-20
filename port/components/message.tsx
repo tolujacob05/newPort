@@ -23,7 +23,6 @@ import WidthLayout from "./width-layout";
 const formSchema = z.object({
   fullName: z.string().min(2).max(50),
   subject: z.string().min(2).max(50),
-  email: z.string().email(),
   message: z.string().min(2),
 });
 
@@ -36,7 +35,6 @@ const Message = () => {
     defaultValues: {
       fullName: "",
       subject: "",
-      email: "",
       message: "",
     },
   });
@@ -44,11 +42,10 @@ const Message = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     await axios
       .post(
-        "https://formspree.io/f/mzbnowlb",
+        "https://formspree.io/f/xovaavaw",
         {
           fullName: values.fullName,
           subject: values.subject,
-          email: values.email,
           message: values.message,
         },
         {
@@ -74,14 +71,13 @@ const Message = () => {
 
   return (
     <>
-      <div className="space-y-6 lg:flex lg:flex-col lg:self-end">
-        <WidthLayout>
-          <h1 className="text-muted text-4xl text-start lg:text-end">
-            Hit me Up
-          </h1>
-        </WidthLayout>
-        <div className="relative z-20 card1 lg:w-[690px]">
-          <section className="card2 flex flex-col justify-center p-2 shadow-md relative bg-background-img bg-cover w-full lg:w-[690px] h-[450px] rounded-3xl">
+      <div className="space-y-6 lg:flex lg:flex-col lg:self-end relative z-20">
+        <h1 className="text-muted text-4xl text-start lg:text-end">
+          Hit me Up
+        </h1>
+
+        <div className="card1 lg:w-[690px]">
+          <section className="card2 flex flex-col justify-center shadow-md relative bg-background-img bg-cover w-full lg:w-[690px] rounded-3xl">
             {/* <div className="absolute inset-0 backdrop-blur-sm bg-[#161822]/90 -z-10 rounded-2xl md:rounded-r-2xl md:rounded-l-none"></div> */}
             {/* <div className="rounded-3xl border border-orange-300 p-2 shadow-lg"> */}
             <Dialog
@@ -92,7 +88,7 @@ const Message = () => {
                 }
               }}
             >
-              <DialogContent>
+              <DialogContent className="text-muted-foregroundTwo">
                 Your form has been submitted.
                 <DialogFooter>
                   <Button
@@ -107,7 +103,7 @@ const Message = () => {
             </Dialog>
 
             <WidthLayout>
-              <div className="relative">
+              <div className="relative py-6 ">
                 <Form {...form}>
                   <form
                     onSubmit={form.handleSubmit(onSubmit)}
@@ -126,7 +122,7 @@ const Message = () => {
                               placeholder="First Name"
                               {...field}
                               required
-                              className="bg-gradient from-green to-primary focus-visible:ring-background-five h-12"
+                              className="bg-gradient from-green to-primary focus-visible:ring-background-five h-14"
                             />
                           </FormControl>
 
@@ -148,7 +144,7 @@ const Message = () => {
                               placeholder="Subject"
                               {...field}
                               required
-                              className="bg-gradient from-green to-primary focus-visible:ring-background-five h-12"
+                              className="bg-gradient from-green to-primary focus-visible:ring-background-five h-14"
                             />
                           </FormControl>
 

@@ -13,9 +13,9 @@ const Contact = (props: SVGProps<SVGSVGElement>) => {
   return (
     <>
       <div className="relative z-20 space-y-6">
-        <WidthLayout>
-          <h1 className="text-muted text-4xl">SOCIAL SPACE</h1>
-        </WidthLayout>
+        {/* <WidthLayout> */}
+        <h1 className="text-muted text-4xl">SOCIAL SPACE</h1>
+        {/* </WidthLayout> */}
         <div className="parent lg:w-[690px]">
           <div
             className={`card-contact transition-all duration-500 ease-in-out ${

@@ -1,13 +1,10 @@
-import Image from "next/image";
-import WidthLayout from "./width-layout";
-
 const Demo = () => {
   return (
-    <WidthLayout>
+    <>
       <div className="relative z-20 flex flex-col xl:flex-row items-center xl:justify-between gap-20 xl:gap-0">
         <div className="xl:relative xl:z-20">
-          <h1 className="text-muted text-lg lg:text-4xl overflow-hidden border-r-4 border-primary whitespace-nowrap mx-auto tracking-widest animate-typing">
-            FRAMEWORKS AND TOOLS
+          <h1 className="text-muted text-4xl overflow-hidden border-r-4 border-primary whitespace-nowrap mx-auto tracking-widest animate-typing">
+            FRAMEWORKS
           </h1>
         </div>
 
@@ -96,7 +93,7 @@ const Demo = () => {
           </div>
         </div>
       </div>
-    </WidthLayout>
+    </>
   );
 };
 
