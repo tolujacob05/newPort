@@ -13,7 +13,7 @@ import type { SVGProps } from "react";
 const Resume = (props: SVGProps<SVGSVGElement>) => {
   return (
     <>
-      <div className="relative z-20 flex flex-col items-start justify-start space-y-6">
+      <div className="mt-20 lg:mt-0 relative z-20 flex flex-col items-start justify-start space-y-6">
         <section>
           <h1 className="text-muted text-4xl">RESUME</h1>
           <p className="text-muted-foregroundTwo">Career Journey</p>

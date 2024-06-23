@@ -76,6 +76,7 @@ const config = {
         gradientStart: "rgba(0, 67, 255, 0.55)",
         gradientEnd: "rgba(0, 103, 255, 0.89)",
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -222,6 +223,22 @@ const config = {
             "transform-origin": "right",
           },
         },
+
+        flash: {
+          "0%, 100%": { opacity: "0" },
+          "50%": { opacity: "1" },
+        },
+
+        gravity: {
+          to: { transform: "rotate(360deg)" },
+        },
+
+        moveDot: {
+          "0%, 100%": { top: "10%", right: "10%" },
+          "25%": { top: "10%", right: "calc(100% - 35px)" },
+          "50%": { top: "calc(100% - 30px)", right: "calc(100% - 35px)" },
+          "75%": { top: "calc(100% - 30px)", right: "10%" },
+        },
       },
 
       animation: {
@@ -244,6 +261,9 @@ const config = {
         pulseGlow: "pulseGlow 5s linear infinite alternate",
         animate: "animate 2s ease-in-out infinite",
         display: "display 4s linear infinite",
+        flash: "flash 2s infinite",
+        gravity: "gravity 2s infinite",
+        moveDot: "moveDot 6s linear infinite",
         // corner: "corner 3s linear infinite",
       },
       boxShadow: {
