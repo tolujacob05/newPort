@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="relative z-20 flex flex-col items-center justify-center gap-2 pt-6">
+      <div className="mt-20 lg:mt-0 relative z-20 flex flex-col items-center justify-center gap-2 pt-6">
         <h5 className="text-xs text-muted">Tolu_Jacob</h5>
 
         <div className="flex gap-4">

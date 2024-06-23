@@ -32,7 +32,30 @@ const Home = () => {
 
         <div className="absolute right-0 w-20 h-20 lg:w-40 lg:h-40 rounded-l-full bottom-2/6 bg-[#4D5BCE] blur-3xl"></div>
 
-        <div className="box z-10 bg-[url('https://res.cloudinary.com/dno5bo4bx/image/upload/v1718038499/portfolio/IMG_0262_ttotuw.jpg')] bg-cover w-full"></div>
+        <div className="outer w-full h-[350px] lg:min-w-72 rounded-xl">
+          <div className="ray"></div>
+          <div className="relative card-dot">
+            <div className="move-dot"></div>
+            <div
+              className="absolute w-full h-[350px] rounded-xl"
+              style={{ aspectRatio: "16 / 9" }}
+            >
+              <Image
+                src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718038499/portfolio/IMG_0262_ttotuw.jpg"
+                layout="fill"
+                objectFit="cover"
+                alt="Juno Image"
+                className="rounded-xl"
+              />
+            </div>
+
+            <div className="line topl"></div>
+            <div className="line leftl"></div>
+            <div className="line bottoml"></div>
+            <div className="line rightl"></div>
+          </div>
+        </div>
+        {/* <div className="box z-10 bg-[url('https://res.cloudinary.com/dno5bo4bx/image/upload/v1718038499/portfolio/IMG_0262_ttotuw.jpg')] bg-cover w-full"></div> */}
 
         <div className="relative space-y-6">
           <div className="flex gap-2">

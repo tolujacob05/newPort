@@ -176,14 +176,14 @@ const Navbar = () => {
                         </a>
                       </li>
                       <li>
-                        {/* <a href="https://www.instagram.com/tolujacob05"> */}
-                        <Image
-                          src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117582/portfolio/Vector4_zjfv2b.png"
-                          width={20}
-                          height={20}
-                          alt=""
-                        />
-                        {/* </a> */}
+                        <a href="mailto:tolujacob05@gmail.com">
+                          <Image
+                            src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718117582/portfolio/Vector4_zjfv2b.png"
+                            width={20}
+                            height={20}
+                            alt=""
+                          />
+                        </a>
                       </li>
                       <li>
                         <a href="https://www.linkedin.com/in/akinjare-toluwase">

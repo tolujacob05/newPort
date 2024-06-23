@@ -12,7 +12,7 @@ const Contact = (props: SVGProps<SVGSVGElement>) => {
 
   return (
     <>
-      <div className="relative z-20 space-y-6">
+      <div className="mt-20 lg:mt-0 relative z-20 space-y-6">
         {/* <WidthLayout> */}
         <h1 className="text-muted text-4xl">SOCIAL SPACE</h1>
         {/* </WidthLayout> */}
