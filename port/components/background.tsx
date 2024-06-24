@@ -6,6 +6,7 @@ import Resume from "./resume";
 import Contact from "./contact";
 import Message from "./message";
 import Footer from "./footer";
+import { Comment } from "./comment";
 
 export default function Background() {
   return (
@@ -17,7 +18,10 @@ export default function Background() {
             <Slider />
             <Demo />
             <Resume />
-            <Contact />
+            <div className="flex flex-col lg:flex-row">
+              <Contact />
+              <Comment />
+            </div>
             <Message />
             <Footer />
           </div>
