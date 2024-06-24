@@ -4,7 +4,7 @@ export const Comment = () => {
       <div className="void" id="void">
         <div className="crop">
           <div id="card-list" className="ul">
-            <div className="li w-full pb-10 lg:pb-0">
+            <div className="li w-11/12">
               <div className="comment-card px-4 py-4">
                 <span className="model-name">Gretel-ACTGAN</span>
                 <span>
