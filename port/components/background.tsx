@@ -1,3 +1,5 @@
+"use client";
+
 import Home from "@/app/landing/page";
 import { Slider } from "./slider";
 import WidthLayout from "./width-layout";
@@ -12,20 +14,27 @@ export default function Background() {
   return (
     <>
       <div className="relative min-h-screen w-full">
-        {/* <WidthLayout> */}
-        <div className="flex flex-col lg:space-y-40 z-20">
-          <Home />
-          <Slider />
-          <Demo />
-          <Resume />
-          <div className="flex flex-col lg:flex-row">
+        <WidthLayout>
+          <div className="flex flex-col lg:space-y-40 z-20">
+            <Home />
+            <Slider />
+            <Resume />
+            {/* <div>
+              <div className="flex flex-col gap-20 lg:flex-row lg:items-center lg:gap-0 lg:justify-between">
+                <div>
+                  <Demo />
+                </div>
+                <div>
+                  <Comment />
+                </div>
+              </div>
+            </div> */}
+            <Demo />
             <Contact />
-            <Comment />
+            <Message />
+            <Footer />
           </div>
-          <Message />
-          <Footer />
-        </div>
-        {/* </WidthLayout> */}
+        </WidthLayout>
 
         <div className="absolute h-20 w-20 border-2 border-white/70 rounded-full top-20 right-20 animate-[one_8s_linear_infinite] bg-[rgba(255, 255, 255, 0.5)]"></div>
         <div className="absolute h-20 w-20 border-2 border-white/70 rounded-full top-60 left-60 animate-[one_10s_linear_infinite] bg-[rgba(217, 22, 22, 0.5)]"></div>
