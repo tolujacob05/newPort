@@ -17,31 +17,31 @@ const Demo = () => {
         <div className="flex flex-col pt-10">
           <div className="xl:relative xl:z-20">
             <p className="text-base text-muted-foregroundTwo typewriter">
-              <Typical
-                  loop={Infinity}
-                  wrapper="b"
-                  steps={[
-                    'Visual Studio Code',
-                    1000,
-                    'Intellij IDEA',
-                    1000,
-                    'Figma',
-                    1000,
-                    'React',
-                    1000,
-                    'Nextjs',
-                      1000,
-                      'Vue',
-                      1000,
-                      'Sass/Scss',
-                      1000,
-                      'Nodejs',
-                      1000,
-                      'Html & css',
-                      1000,
-                      'Tailwind css'
-                  ]}
-              />
+              {/*<Typical*/}
+              {/*    loop={Infinity}*/}
+              {/*    wrapper="b"*/}
+              {/*    steps={[*/}
+              {/*      'Visual Studio Code',*/}
+              {/*      1000,*/}
+              {/*      'Intellij IDEA',*/}
+              {/*      1000,*/}
+              {/*      'Figma',*/}
+              {/*      1000,*/}
+              {/*      'React',*/}
+              {/*      1000,*/}
+              {/*      'Nextjs',*/}
+              {/*        1000,*/}
+              {/*        'Vue',*/}
+              {/*        1000,*/}
+              {/*        'Sass/Scss',*/}
+              {/*        1000,*/}
+              {/*        'Nodejs',*/}
+              {/*        1000,*/}
+              {/*        'Html & css',*/}
+              {/*        1000,*/}
+              {/*        'Tailwind css'*/}
+              {/*    ]}*/}
+              {/*/>*/}
             </p>
           </div>
 
