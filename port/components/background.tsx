@@ -1,3 +1,5 @@
+"use client";
+
 import Home from "@/app/landing/page";
 import { Slider } from "./slider";
 import WidthLayout from "./width-layout";
@@ -6,6 +8,7 @@ import Resume from "./resume";
 import Contact from "./contact";
 import Message from "./message";
 import Footer from "./footer";
+import { Comment } from "./comment";
 
 export default function Background() {
   return (
@@ -15,8 +18,18 @@ export default function Background() {
           <div className="flex flex-col lg:space-y-40 z-20">
             <Home />
             <Slider />
-            <Demo />
             <Resume />
+            {/* <div>
+              <div className="flex flex-col gap-20 lg:flex-row lg:items-center lg:gap-0 lg:justify-between">
+                <div>
+                  <Demo />
+                </div>
+                <div>
+                  <Comment />
+                </div>
+              </div>
+            </div> */}
+            <Demo />
             <Contact />
             <Message />
             <Footer />

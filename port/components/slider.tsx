@@ -71,7 +71,7 @@ export const Slider = () => {
           WorkShop
         </h1>
 
-        <div className="w-full z-20 justify-center h-[500px] gap-2 hidden lg:flex">
+        <div className="w-full z-20 justify-center h-[500px] gap-2 hidden lg:flex cursor-pointer">
           {profiles.map((profile, index) => (
             <div
               key={index}
@@ -144,8 +144,8 @@ export const Slider = () => {
         </div>
       </div>
 
-      <div>
-        <div className="container flex flex-col md:grid md:grid-cols-2 gap-10 space-y-20 md:space-y-0 lg:hidden">
+      <div className="lg:hidden">
+        <div className="container flex flex-col md:grid md:grid-cols-2 gap-10 space-y-20 md:space-y-0 ">
           {profiles.map((profile, index) => (
             <div
               key={index}

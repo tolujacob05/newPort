@@ -19,7 +19,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
           <p className="text-muted-foregroundTwo">Career Journey</p>
         </section>
 
-        <section className="grid grid-cols-2 lg:flex lg:gap-4 gap-10">
+        <section className="grid grid-cols-2 lg:flex lg:gap-4 gap-10 cursor-pointer">
           <Dialog>
             <DialogTrigger asChild>
               <div className="flex gap-2 items-center justify-start">

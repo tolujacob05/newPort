@@ -423,193 +423,6 @@ h5 {
   animation: fade-loop-alt 7s infinite;
 }
 
-@keyframes move-dot1 {
-  0% {
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  20% {
-    transform: translateX(-50%) translateY(30%);
-  }
-
-  100% {
-    transform: translateX(-50%) translateY(30%);
-  }
-}
-
-@keyframes move-dot2 {
-  0% {
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  15% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-
-  30% {
-    transform: translateX(-10%) translateY(-10%);
-  }
-
-  100% {
-    transform: translateX(-10%) translateY(-10%);
-  }
-}
-
-.animation-example {
-  /* position: relative; */
-  height: 40vmin;
-  width: 40vmin;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .item {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-    transform: translateX(-50%);
-    transform-origin: 50% 100%;
-    pointer-events: none;
-  }
-
-  .item:nth-child(2) {
-    transform: translateX(-50%) rotate(90deg);
-  }
-
-  .item:nth-child(3) {
-    transform: translateX(-50%) rotate(180deg);
-  }
-
-  .item:nth-child(4) {
-    transform: translateX(-50%) rotate(270deg);
-  }
-
-  .item > .line {
-    height: 100%;
-    width: "calc(50% + 1px)";
-    border-right: 2px dashed var(--primary);
-  }
-
-  .item > .dot {
-    position: absolute;
-    /* left: 50%; */
-    /* top: 10%; */
-    /* transform: translateX(-50%) translateY(-50%); */
-    height: 100%;
-    width: 100%;
-    /* animation: move-dot1 5.5s linear infinite; */
-  }
-
-  .item > .dot::after {
-    content: "";
-    position: absolute;
-    /* top: 50%; */
-    /* left: 50%; */
-    transform: translateX(-50%) translateY(-50%);
-    height: 5%;
-    width: 5%;
-    background: var(--green-accentTwo);
-    border: 2px solid var(--primary);
-    border-radius: 50%;
-  }
-
-  .item > .circle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 25%;
-    width: 25%;
-    border-radius: 50%;
-    background-image: linear-gradient(
-      40deg,
-      #18298b 0%,
-      #10e27d 45%,
-      #e8e8cd 100%
-    );
-    padding: 50%;
-  }
-
-  .item.-type2 {
-    top: 0;
-    left: 0;
-    transform: none;
-    transform-origin: 100% 100%;
-  }
-
-  .item.-type2:nth-child(5) {
-    transform: scaleX(-100%);
-  }
-
-  .item.-type2:nth-child(6) {
-    transform: scaleX(-100%) scaleY(-100%);
-  }
-
-  .item.-type2:nth-child(7) {
-    transform: scaleY(-100%);
-  }
-
-  .item.-type2 > .line {
-    position: absolute;
-    top: 30%;
-    left: "calc(30% - 1px)";
-    width: 70%;
-    height: 40%;
-    border-right: none;
-    /* border-left: 2px dashed var(--primary);
-    border-bottom: 2px dashed var(--primary); */
-  }
-
-  .item.-type2 > .dot {
-    top: 30%;
-    left: 30%;
-  }
-
-  .item.-type2 > .circle {
-    top: 30%;
-    left: 30%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  /* .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    height: 50%;
-    width: 50%;
-  }
-
-  .center > .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    border-radius: 50%;
-  }
-
-  .center > .circle:nth-child(1) {
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 0 3vmin rgba(0, 0, 0, 0.1);
-  }
-
-  .center > .circle:nth-child(2) {
-    height: 80%;
-    width: 80%;
-    border: 2px solid var(--primary);
-  }
-
-  .center > .circle:nth-child(3) {
-    height: 50%;
-    width: 50%;
-    background: var(--primary);
-  } */
-}
-
 .parent {
   height: 100%;
   perspective: 1000px;
@@ -946,21 +759,277 @@ h5 {
   position: absolute;
   background-color: #2c2c2c;
 }
+
 .topl {
   top: 10%;
   background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%);
 }
+
 .bottoml {
   bottom: 10%;
 }
+
 .leftl {
   left: 10%;
   width: 1px;
   height: 100%;
   background: linear-gradient(180deg, #747474 30%, #222424 70%);
 }
+
 .rightl {
   right: 10%;
   width: 1px;
   height: 100%;
+}
+
+.animation-example {
+  @apply relative h-[90vmin] w-[90vmin];
+  /* top: 50%;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+.item {
+  @apply absolute h-1/2 w-1/2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  pointer-events: none;
+}
+
+.item:nth-child(2) {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.item:nth-child(3) {
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.item:nth-child(4) {
+  transform: translateX(-50%) rotate(270deg);
+}
+
+.item-line {
+  @apply absolute h-full w-[calc(50%+1px)] border-r-2 border-dashed border-current;
+}
+
+.dot {
+  @apply absolute h-full w-full;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: move-dot1 5.5s linear infinite;
+}
+
+.dot::after {
+  content: "";
+  @apply absolute h-2 w-2 bg-white border-2 border-current rounded-full;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.item-circle {
+  @apply absolute h-1/5 w-1/5 bg-current rounded-full bg-background;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item.-type2 {
+  @apply absolute;
+  top: 0;
+  left: 0;
+  transform: none;
+  transform-origin: 100% 100%;
+}
+
+.item.-type2:nth-child(5) {
+  transform: scaleX(-100%);
+}
+
+.item.-type2:nth-child(6) {
+  transform: scaleX(-100%) scaleY(-100%);
+}
+
+.item.-type2:nth-child(7) {
+  transform: scaleY(-100%);
+}
+
+.item.-type2 > .item-line {
+  @apply absolute w-[70%] h-[40%] border-r-0 border-l-2 border-b-2 border-dashed border-current;
+  top: 30%;
+  left: calc(30% - 1px);
+}
+
+.item.-type2 > .dot {
+  top: 30%;
+  left: 30%;
+  animation: move-dot2 4s linear infinite;
+}
+
+.item.-type2 > .item-circle {
+  top: 30%;
+  left: 30%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.center {
+  @apply absolute h-1/2 w-1/2;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.center > .comment-circle {
+  @apply absolute border-2 rounded-full;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.center > .comment-circle:nth-child(1) {
+  @apply h-full w-full bg-white shadow-lg bg-[url('https://res.cloudinary.com/dno5bo4bx/image/upload/v1718038499/portfolio/IMG_0262_ttotuw.jpg')] bg-cover;
+}
+
+.center > .comment-circle:nth-child(2) {
+  @apply h-4/5 w-4/5;
+}
+
+.center > .comment-circle:nth-child(3) {
+  @apply h-1/2 w-1/2 bg-current;
+}
+
+.item:nth-of-type(1) > .dot {
+  animation-delay: 0;
+}
+
+.item:nth-of-type(7) > .dot {
+  animation-delay: 0.5s;
+}
+
+.item:nth-of-type(2) > .dot {
+  animation-delay: 1s;
+}
+
+.item:nth-of-type(6) > .dot {
+  animation-delay: 1.5s;
+}
+
+.item:nth-of-type(3) > .dot {
+  animation-delay: 2s;
+}
+
+.item:nth-of-type(5) > .dot {
+  animation-delay: 2.5s;
+}
+
+.item:nth-of-type(4) > .dot {
+  animation-delay: 3s;
+}
+
+.item:nth-of-type(8) > .dot {
+  animation-delay: 3.5s;
+}
+
+@keyframes move-dot1 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  20% {
+    transform: translateX(-50%) translateY(30%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(30%);
+  }
+}
+
+@keyframes move-dot2 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  15% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+
+  30% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+
+  100% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+}
+
+.item:nth-child(1) .item-line {
+  border-color: tomato;
+}
+
+.item:nth-child(2) .item-line {
+  border-color: #3348be;
+}
+
+.item:nth-child(3) .item-line {
+  border-color: #3348be;
+}
+
+.item:nth-child(4) .item-line {
+  border-color: #10e27d;
+}
+
+.item:nth-child(5) .item-line {
+  border-color: #ecedf3;
+}
+
+.item:nth-child(6) .item-line {
+  border-color: #3348be;
+}
+
+.item:nth-child(7) .item-line {
+  border-color: #10e27d;
+}
+
+.item:nth-child(8) .item-line {
+  border-color: pink;
+}
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end) infinite,
+    blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 50%;
+  }
+  /* 90% {
+    width: 50%;
+  } */
+  100% {
+    width: 0;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }

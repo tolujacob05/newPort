@@ -21,6 +21,9 @@ const config = {
       backgroundImage: {
         "gradient-one":
           "linear-gradient(135deg, var(--primary) 0%, var(--primary-hueOne) 50%, #18298B 70%)",
+        "gradient-two":
+          "linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1))",
+
         "background-img":
           "url('https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png')",
       },
@@ -49,7 +52,7 @@ const config = {
           accentTwo: "#08884A",
         },
         muted: {
-          DEFAULT: " #FFFFFF",
+          DEFAULT: "#FFFFFF",
           foregroundOne: "#ECEDF3",
           foregroundTwo: "#A3B6D9",
         },
@@ -128,21 +131,13 @@ const config = {
         },
 
         rotateCW: {
-          from: {
-            transform: "translate3d(0px, -50%, -1px) rotate(-45deg)",
-          },
-          to: {
-            transform: "translate3d(0px, -50%, 0px) rotate(-315deg)",
-          },
+          from: { transform: "translate3d(0px, -50%, 0px) rotate(0deg)" },
+          to: { transform: "translate3d(0px, -50%, 0px) rotate(360deg)" },
         },
 
         rotateCCW: {
-          from: {
-            transform: "rotate(45deg)",
-          },
-          to: {
-            transform: "rotate(315deg)",
-          },
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(-360deg)" },
         },
 
         pulseGlow: {
