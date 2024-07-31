@@ -12,7 +12,7 @@ import type { SVGProps } from "react";
 
 const Resume = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <>
+    <section id="resume">
       <div className="mt-20 lg:mt-0 relative z-20 flex flex-col items-start justify-start space-y-6">
         <section>
           <h1 className="text-muted text-4xl">RESUME</h1>
@@ -847,7 +847,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
           </Dialog>
         </section>
       </div>
-    </>
+    </section>
   );
 };
 
