@@ -20,6 +20,22 @@ import { Blog } from "./blog";
 
 const profiles = [
   {
+    name: "Juno",
+    description:
+        "Home for Young Professionals where you can work, play and network all under one roof. Enjoy intentional designed co-living space where you can live your own way",
+    framework: "Tools used: React, css, express",
+    link: "https://heartfelt-wisp-0bbe65.netlify.app",
+    img: "https://res.cloudinary.com/dno5bo4bx/image/upload/v1718204459/portfolio/z6uwfum2tg8q45o7uuqy.png",
+  },
+  {
+    name: "Wealth App",
+    description:
+        "An app that enables users to comfortably invest, track their investments, and monitor real-time profits",
+    framework: "Tools used: NextJS, Typescript, Tailwind",
+    link: "https://eugene-sankore.netlify.app",
+    img: "https://res.cloudinary.com/dno5bo4bx/image/upload/v1722439710/portfolio/Screenshot_2024-06-21_082234_hofsft.png",
+  },
+  {
     name: "Blog 🚀",
     description:
       "Get your up to date information on diverse industries for free 😉",
@@ -33,23 +49,6 @@ const profiles = [
     framework: "Tools used: React, tailwind css",
     link: "https://leafy-cupcake-a4c936.netlify.app",
     img: "https://res.cloudinary.com/dno5bo4bx/image/upload/v1718204468/portfolio/c7ze5qzxc359wihxtaun.png",
-  },
-  {
-    name: "Juno",
-    description:
-      "Home for Young Professionals where you can work, play and network all under one roof. Enjoy intentional designed co-living space where you can live your own way",
-    framework: "Tools used: React, css, express",
-    link: "https://heartfelt-wisp-0bbe65.netlify.app",
-    img: "https://res.cloudinary.com/dno5bo4bx/image/upload/v1718204459/portfolio/z6uwfum2tg8q45o7uuqy.png",
-  },
-
-  {
-    name: "Natours",
-    description:
-      "A tour guide fused with necessary information on your prefered destination 😁",
-    framework: "Tools used: Html, scss.",
-    link: "https://tourmaline-cactus-4c16b8.netlify.app",
-    img: "https://res.cloudinary.com/dno5bo4bx/image/upload/v1718204477/portfolio/nddeam2fi4nery2k44zd.png",
   },
 ];
 
@@ -108,7 +107,7 @@ export const Slider = () => {
                           <Pizza />
                         ) : profile.name === "Juno" ? (
                           <Juno />
-                        ) : profile.name === "Natours" ? (
+                        ) : profile.name === "Wealth App" ? (
                           <Natours />
                         ) : (
                           ""

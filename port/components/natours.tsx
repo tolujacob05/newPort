@@ -7,20 +7,19 @@ export const Natours = () => {
       <WidthLayout>
         <div className="flex flex-col space-y-10">
           <div className="space-y-6">
-            <h1 className="text-muted text-2xl">Natours</h1>
+            <h1 className="text-muted text-2xl">Wealth Black App</h1>
             <p className="text-muted">
-              This is a demo application designed to cater to the needs of
-              travelers seeking information, inspiration, and services for their
-              journeys.
+              This is an ongoing application for a client I wish to showcase.
+              This application enables users to comfortably invest, track their investments, and monitor real-time profits.
             </p>
           </div>
 
           <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
             <Image
-              src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1718204477/portfolio/nddeam2fi4nery2k44zd.png"
+              src="https://res.cloudinary.com/dno5bo4bx/image/upload/v1722439710/portfolio/Screenshot_2024-06-21_082234_hofsft.png"
               layout="fill"
               objectFit="cover"
-              alt="Natours Image"
+              alt="Wealth Image"
             />
           </div>
 
@@ -28,7 +27,7 @@ export const Natours = () => {
             <div className="text-muted">repo</div>
             <a
               className="bg-primary px-4 h-6 rounded-xl"
-              href="https://tourmaline-cactus-4c16b8.netlify.app"
+              href="https://eugene-sankore.netlify.app"
             >
               Live Demo
             </a>
