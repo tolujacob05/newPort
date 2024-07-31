@@ -14,6 +14,16 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { scroller } from 'react-scroll';
+
+const scrollToSection = (sectionId: string) => {
+  scroller.scrollTo(sectionId, {
+    duration: 800,
+    delay: 0,
+    smooth: 'easeInOutQuart',
+  });
+};
+
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -137,11 +147,11 @@ const Navbar = () => {
                       <Button onClick={() => setIsNavOpen(false)}>HOME</Button>
                     </Link>
 
-                    <Link href={""}>
-                      <Button onClick={() => setIsNavOpen(false)}>BASE</Button>
+                    <Link href="#resume" onClick={() => scrollToSection('resume')}>
+                      <Button onClick={() => setIsNavOpen(false)}>RESUME</Button>
                     </Link>
 
-                    <Link href={"/slider"}>
+                    <Link href="#slider" onClick={() => scrollToSection('slider')}>
                       <Button onClick={() => setIsNavOpen(false)}>
                         WORKSHOP
                       </Button>
@@ -218,12 +228,12 @@ const Navbar = () => {
               HOME
             </Button>
           </Link>
-          <Link href={""}>
+          <Link href="#resume" onClick={() => scrollToSection('resume')}>
             <Button variant={"link"} className="px-6">
-              BASE
+              RESUME
             </Button>
           </Link>
-          <Link href={"/slider"}>
+          <Link href="#slider" onClick={() => scrollToSection('slider')}>
             <Button variant={"link"} className="px-6">
               WORKSHOP
             </Button>

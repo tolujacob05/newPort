@@ -66,8 +66,8 @@ export const Slider = () => {
 
   return (
     <>
-      <div className="mt-10 lg:mt-0 lg:space-y-6">
-        <h1 className="text-muted text-start text-4xl" id="slider">
+      <section className="mt-10 lg:mt-0 lg:space-y-6" id="slider">
+        <h1 className="text-muted text-start text-4xl">
           WorkShop
         </h1>
 
@@ -142,7 +142,7 @@ export const Slider = () => {
           <div className="h-6 w-6 bg-green rounded-full animate-bounce [animation-delay:-0.15s]"></div>
           <div className="h-6 w-6 bg-green rounded-full animate-bounce"></div>
         </div>
-      </div>
+      </section>
 
       <div className="lg:hidden">
         <div className="container flex flex-col md:grid md:grid-cols-2 gap-10 space-y-20 md:space-y-0 ">
