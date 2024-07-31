@@ -71,8 +71,8 @@ const Message = () => {
 
   return (
     <>
-      <div className="mt-20 lg:mt-0 space-y-6 lg:flex lg:flex-col lg:self-end relative z-20">
-        <h1 className="text-muted text-4xl text-start lg:text-end">
+      <div className="mt-20 lg:mt-0 space-y-6 lg:flex lg:flex-col lg:self-start relative z-20">
+        <h1 className="text-muted text-4xl text-start lg:text-start">
           Hit me Up
         </h1>
 

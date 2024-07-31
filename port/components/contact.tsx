@@ -12,9 +12,9 @@ const Contact = (props: SVGProps<SVGSVGElement>) => {
 
   return (
     <>
-      <div className="mt-20 lg:mt-0 relative z-20 space-y-6">
-        <h1 className="text-muted text-4xl">SOCIAL SPACE</h1>
-        <p className="text-muted-foregroundTwo">C&apos;mon Lets network!</p>
+      <div className="mt-20 lg:mt-0 relative z-20 space-y-6 lg:flex-col lg:self-end">
+        <h1 className="text-muted text-4xl lg:text-end">SOCIAL SPACE</h1>
+        <p className="text-muted-foregroundTwo lg:text-end">C&apos;mon Lets network!</p>
 
         <div className="parent w-full lg:w-[650px] xl:pt-10">
           <div
