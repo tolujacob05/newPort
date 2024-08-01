@@ -11,11 +11,13 @@ const Demo = () => {
 
   return (
     <>
-      <div className="mt-20 lg:mt-0 relative z-20">
-        <h1 className="text-muted text-4xl">TOOLS</h1>
-        <p className="text-muted-foregroundTwo"> IDEs and Frameworks</p>
+      <div className="mt-20 lg:mt-0 relative z-20 space-y-6">
+        <section>
+          <h1 className="text-muted text-4xl">TOOLS</h1>
+          <p className="text-muted-foregroundTwo"> IDEs and Frameworks</p>
+        </section>
 
-        <div className="flex flex-col gap-20 pt-10">
+        <div className="flex flex-col gap-20">
           <div className="xl:relative xl:z-20">
             <p className="text-base text-muted-foregroundTwo typewriter">
               <TypingEffect dataPeriod={2000} dataType={["Visual Studio Code", "Intellij IDEA", "React", "Nextjs", "Vue", "SCSS", "Tailwind CSS", "Figma", "HTML&CSS", "Node", ""]}/>
