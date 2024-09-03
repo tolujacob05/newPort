@@ -239,7 +239,7 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          <Link href={""}>
+          <Link href={"https://www.github.com/tolujacob05"}>
             <Button variant={"link"} className="px-6">
               REPO
             </Button>
