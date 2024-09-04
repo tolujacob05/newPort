@@ -20,8 +20,11 @@ const Demo = () => {
         <div className="flex flex-col gap-20">
           <div className="xl:relative xl:z-20">
             <p className="text-base text-muted-foregroundTwo typewriter">
-              <TypingEffect dataPeriod={2000} dataType={["Visual Studio Code", "Intellij IDEA", "React", "Nextjs", "Vue", "SCSS", "Tailwind CSS", "Figma", "HTML&CSS", "Node", ""]}/>
+              <TypingEffect dataPeriod={2000} dataType={["Visual Studio Code", "Intellij IDEA", "React", "Nextjs", "Vue", "SCSS", "Tailwind CSS", "Figma", "HTML&CSS", "Node", "Java", "Spring boot", ""]}/>
             </p>
+
+            <ul>
+            </ul>
           </div>
 
           <div>
