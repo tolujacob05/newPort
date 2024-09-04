@@ -15,7 +15,7 @@ export default function Background() {
     <>
       <div className="relative min-h-screen w-full">
         <WidthLayout>
-          <div className="flex flex-col lg:space-y-40 z-20">
+          <div className="flex flex-col lg:space-y-20 z-20">
             <Home />
             <Slider />
             <Resume />
