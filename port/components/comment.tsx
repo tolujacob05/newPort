@@ -1,9 +1,65 @@
-import type { SVGProps } from "react";
+import { useState, type SVGProps } from "react";
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Lang from "./lang";
+import Lib from "./lib";
+
+import { Azeret_Mono } from "next/font/google";
+import Others from "./others";
+
+const azeretMono = Azeret_Mono({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  dir?: string;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `full-width-tab-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
+  };
+}
 
 export const Comment = (props: SVGProps<SVGSVGElement>) => {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
     <>
-      <div className="animation-example animation-example relative z-20">
+      {/* <div className="animation-example animation-example relative z-20">
         <div className="item">
           <div className="item-line"></div>
           <div className="dot"></div>
@@ -375,9 +431,56 @@ export const Comment = (props: SVGProps<SVGSVGElement>) => {
         </div>
         <div className="center">
           <div className="comment-circle"></div>
-          {/* <div className="comment-circle"></div>
-          <div className="comment-circle"></div> */}
         </div>
+      </div> */}
+
+      <div className="flex flex-col items-center justify-center">
+        <div>
+          <h4 className="text-muted-foregroundTwo font-mono">
+            Exceptional Skills that make me stand out
+          </h4>
+        </div>
+
+        <Box
+          sx={{
+            maxWidth: { xs: "100%", sm: "100%" },
+            // bgcolor: "background.paper",
+          }}
+        >
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            centered
+            aria-label="auto tabs example"
+          >
+            <Tab
+              label="Programming"
+              className={`text-muted-foregroundTwo text-pb font-mono`}
+            />
+            <Tab
+              label="Frameworks"
+              className="text-muted-foregroundTwo text-pb font-mono"
+            />
+            <Tab
+              label="Others"
+              className="text-muted-foregroundTwo text-pb font-mono"
+            />
+            {/* <Tab label="Item Four" className="text-white" />
+            <Tab label="Item Five" className="text-white" />
+            <Tab label="Item Six" className="text-white" />
+            <Tab label="Item Seven" className="text-white" /> */}
+          </Tabs>
+          <TabPanel value={value} index={0}>
+            <Lang />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Lib />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <Others />
+          </TabPanel>
+        </Box>
       </div>
     </>
   );

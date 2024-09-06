@@ -54,7 +54,7 @@ const Demo = () => {
           <p className="text-muted-foregroundTwo"> IDEs and Frameworks</p>
         </section>
 
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-10 md:gap-20">
           <div className="xl:relative xl:z-20 space-y-4">
             <p className="text-base text-muted-foregroundTwo typewriter">
               <TypingEffect
@@ -67,7 +67,7 @@ const Demo = () => {
               />
             </p>
 
-            <ul className="text-base text-muted-foregroundTwo space-y-2">
+            {/* <ul className="text-base text-muted-foregroundTwo space-y-2">
               {listItems.map((item, index) => (
                 <li
                   key={index}
@@ -87,7 +87,7 @@ const Demo = () => {
                   {item.name}
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div>
             <Comment />

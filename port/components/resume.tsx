@@ -371,7 +371,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => {
               </div>
             </DialogTrigger>
 
-            <DialogContent className="bg-[#161822] border-[#161822] ">
+            <DialogContent className="bg-[#161822] border-[#161822]">
               <DialogClose asChild>
                 <div className="hidden md:block">
                   <Button
